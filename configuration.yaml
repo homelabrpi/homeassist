@@ -1,7 +1,7 @@
 # Loads default set of integrations. Do not remove.
 default_config:
 logger:
-default: info
+  default: info
 
 # Load frontend themes from the themes folder
 frontend:
@@ -11,3 +11,22 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 python_script:
+
+bluetooth:
+
+# Example configuration.yaml entry
+panel_custom:
+  - name: my-panel
+    sidebar_title: TodoMVC
+    sidebar_icon: mdi:work
+    url_path: my-todomvc
+    module_url: /local/my-panel.js
+    config:
+      who: world
+
+switch:
+  - platform: command_line
+    switches:
+      my_command:
+        command_on: "bash /config/scripts/my_script.sh"
+        friendly_name: "Run My Command"
