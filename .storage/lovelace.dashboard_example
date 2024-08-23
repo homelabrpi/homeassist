@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.dashboard_example",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "title": "example",
+          "path": "example",
+          "cards": [
+            {
+              "type": "entities",
+              "entities": [
+                "binary_sensor.workday_sensor"
+              ],
+              "title": "Workday Sensor"
+            },
+            {
+              "show_name": true,
+              "show_icon": true,
+              "type": "button",
+              "tap_action": {
+                "action": "toggle"
+              },
+              "entity": "switch.smart_socket_socket",
+              "name": "smart socket",
+              "icon": "mdi:light-switch"
+            },
+            {
+              "type": "entity",
+              "entity": "switch.smart_socket_socket",
+              "state_color": true
+            },
+            {
+              "type": "entities",
+              "entities": [
+                "sensor.smart_socket_current"
+              ]
+            },
+            {
+              "type": "entities",
+              "entities": [
+                "sensor.smart_socket_power",
+                "sensor.smart_socket_voltage"
+              ]
+            }
+          ],
+          "badges": [
+            {
+              "type": "entity",
+              "entity": "weather.forecast_home",
+              "icon": "mdi:air-humidifier",
+              "visibility": [
+                {
+                  "condition": "screen",
+                  "media_query": ""
+                }
+              ],
+              "display_type": "complete",
+              "show_entity_picture": true,
+              "state_content": [
+                "temperature",
+                "wind_speed",
+                "humidity"
+              ]
+            },
+            {
+              "type": "entity",
+              "entity": "sensor.custom_entity",
+              "color": "red",
+              "show_entity_picture": false,
+              "state_content": [
+                "last_changed",
+                "state",
+                "name",
+                "last_updated"
+              ],
+              "tap_action": {
+                "action": "perform-action",
+                "perform_action": "python_script.increse",
+                "target": {}
+              },
+              "name": "custom counter",
+              "display_type": "complete"
+            },
+            {
+              "type": "entity",
+              "entity": "switch.smart_socket_socket",
+              "tap_action": {
+                "action": "toggle"
+              }
+            },
+            {
+              "type": "entity",
+              "entity": "sensor.speedtest_upload"
+            },
+            {
+              "type": "entity",
+              "entity": "sensor.speedtest_ping"
+            },
+            {
+              "type": "entity",
+              "entity": "sensor.speedtest_download"
+            }
+          ]
+        },
+        {
+          "title": "Home"
+        }
+      ]
+    }
+  }
+}
