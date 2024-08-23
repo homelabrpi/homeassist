@@ -30,3 +30,22 @@ switch:
       my_command:
         command_on: "bash /config/scripts/my_script.sh"
         friendly_name: "Run My Command"
+
+input_number:
+  light_control:
+    name: "Light Control"
+    initial: 50
+    min: 0
+    max: 200
+    step: 1
+#example custom rest entity
+#sensor:
+#  - platform: rest
+#    name: Computer Temperature
+#    resource: http://<ip>:<port>/get_data
+#    method: GET
+#    scan_interval: 60 # How often to update the sensor (in seconds)
+#    value_template: "{{ value_json.temperature }}"
+#    unit_of_measurement: "°C" # Adjust as needed
+#    json_attributes:
+#      - humidity

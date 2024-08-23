@@ -44,6 +44,12 @@
                 "sensor.smart_socket_power",
                 "sensor.smart_socket_voltage"
               ]
+            },
+            {
+              "type": "entities",
+              "entities": [
+                "input_number.light_control"
+              ]
             }
           ],
           "badges": [
