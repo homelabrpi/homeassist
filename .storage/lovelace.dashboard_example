@@ -50,6 +50,20 @@
               "entities": [
                 "input_number.light_control"
               ]
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "input_boolean.helper_toggle"
+                },
+                {
+                  "entity": "switch.smart_socket_socket"
+                },
+                {
+                  "entity": "input_boolean.helper_mobile_notification"
+                }
+              ]
             }
           ],
           "badges": [

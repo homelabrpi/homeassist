@@ -1,0 +1,7 @@
+toggle_helper_script:
+  alias: Toggle Helper Script
+  sequence:
+  - action: python_script.toggle_helper
+    data: {}
+    response_variable: blabla
+  mode: single

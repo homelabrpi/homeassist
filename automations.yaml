@@ -29,3 +29,25 @@
   action:
     - service: switch.toggle
       entity_id: switch.smart_socket_socket
+
+- alias: "Run Python Script Based on Input Boolean"
+  trigger:
+    - platform: state
+      entity_id: input_boolean.helper_toggle
+      to: "on"
+  action:
+    - service: python_script.toggle_helper # Calls the Python script
+  mode: single
+
+# mobile notification
+- alias: "Mobile notification"
+  trigger:
+    - platform: state
+      entity_id: input_boolean.helper_mobile_notification
+      to: "on"
+  action:
+    - service: notify.mobile_app_tamas_iphone_ja
+      data:
+        title: "Mobile notification triggered"
+        message: "Mobile notification triggered on dashboard"
+  mode: single
