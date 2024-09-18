@@ -51,3 +51,15 @@
         title: "Mobile notification triggered"
         message: "Mobile notification triggered on dashboard"
   mode: single
+
+- alias: "Mobile notification huawei"
+  trigger:
+    - platform: state
+      entity_id: input_boolean.helper_mobile_notification_huawei
+      to: "on"
+  action:
+    - service: notify.mobile_app_vtr_l29_tailscale_4
+      data:
+        title: "Mobile notification triggered"
+        message: "Mobile notification triggered on dashboard"
+  mode: single
